@@ -2,7 +2,7 @@ module FootballApi
   class Player
     attr_accessor :number, :name, :pos, :id
 
-    def initialize
+    def initialize(hash = {})
       @number = hash[:number]
       @name   = hash[:name]
       @pos    = hash[:pos]

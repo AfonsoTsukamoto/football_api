@@ -23,7 +23,7 @@ module FootballApi
 
     # The default params for every request
     # TODO : Pass key in config
-    default_params 'APIKey' => ''
+    default_params 'APIKey' => 'c1b5a86a-b0f6-ab2d-4d01db613b03'
 
     # Default request timeout in seconds. This can be overriden by module configuration.
     default_timeout 15
@@ -48,12 +48,8 @@ module FootballApi
       # and responde will only contain that field.
       # It also deep symbolizes the response keys in order to keep things more 'ruby-way'
       def response(options = {})
-        binding.pry
-        response = get!
-        binding.pry
-        response.deep_symbolize_keys!
-
-        (json_id && response[json_id]) ? response[json_id] : []
+        response = get!.deep_symbolize_keys!
+        response[json_id]
       end
 
       def action_query(options = {})

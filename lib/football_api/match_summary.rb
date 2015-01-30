@@ -22,11 +22,11 @@ module FootballApi
     # => { '1': { ... }, '2': { ... } }
     # the only way to have the score is by interpolating the keys.
     # Ugly? yup! as f*ck!
-    def team_goals(hash = {})
-      return {} if !hash[:goals] || hash[:goals].is_a?(Array) || !hash[:goals][:player]
+    def parse_team_goals(hash = {})
+      return [] if !hash[:goals] || hash[:goals].is_a?(Array) || !hash[:goals][:player]
 
       hash[:goals][:player].keys.map do |score|
-        FootballApi::Goal.new(hash[:goals][:player][score].merge(score: score.to_i))
+        FootballApi::Goal.new(hash[:goals][:player][score].merge(score: score.to_s.to_i))
       end
     end
 
@@ -35,7 +35,8 @@ module FootballApi
     # Like with the goals, the only way to iterpolate through all the records
     # is with the hash key.
     def parse_cards(hash, type)
-      return if !hash.is_a?(Hash)
+      return [] if !hash.is_a?(Hash)
+
       hash.keys.map do |key|
         FootballApi::Card.new(hash[key].merge(type: type))
       end

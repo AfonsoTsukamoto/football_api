@@ -1,6 +1,6 @@
 module FootballApi
   class Goal
-    attr_accessor :score, :minute, :player, :owngoal, :penalty,
+    attr_accessor :score, :minute, :player, :owngoal, :penalty
 
     def initialize(hash = {})
       @score = hash[:score]
