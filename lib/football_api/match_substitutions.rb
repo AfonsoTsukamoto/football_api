@@ -8,7 +8,7 @@ module FootballApi
 
     def subs(hash, key)
       return unless hash[key]
-      binding.pry
+
       Hash(hash[key][:substitution]).values.map do |s|
         Substitution.new(s)
       end

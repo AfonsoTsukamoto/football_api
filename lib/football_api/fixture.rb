@@ -13,8 +13,6 @@ module FootballApi
         @from_date = options.delete(:from_date)
         @to_date = options.delete(:to_date)
 
-        binding.pry
-
         response.map{ |fixture|
           new (fixture)
         }

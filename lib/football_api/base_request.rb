@@ -35,9 +35,6 @@ module FootballApi
       # simply returns it
       def get!(options = {}, &block)
         attempts ||= RETRIES
-
-        binding.pry
-
         query = action_query(options)
         get("/api/", query, &block)
 
