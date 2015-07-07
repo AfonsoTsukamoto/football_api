@@ -9,8 +9,9 @@ module FootballApi
 
       def all_from_match(match)
         @match_id = match.is_a?(Match) ? match.id : match
+        res = response
 
-        response.map{ |commentary| new(commentary) }.first
+        res.map{ |commentary| new(commentary) }.first
       end
 
       def commentary_params
