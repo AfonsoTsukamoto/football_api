@@ -8,10 +8,9 @@ module FootballApi
       attr_accessor :match_id
 
       def all_from_match(match)
-        self.match_id = match.is_a?(Match) ? match.id : match
-        response.map{ |commentary|
-          new(commentary)
-        }.first
+        @match_id = match.is_a?(Match) ? match.id : match
+
+        response.map{ |commentary| new(commentary) }.first
       end
 
       def commentary_params
@@ -19,18 +18,22 @@ module FootballApi
       end
     end
 
-    attr_accessor :match_id, :static_id, :match_info, :match_summary, :match_stats,
-                  :local_match_team, :visitor_match_team, :commentaries
+    attr_accessor :match_id, :static_id, :match_info, :match_summary,
+                  :match_stats, :local_match_team, :visitor_match_team,
+                  :commentaries, :match_bench, :match_substitutions
 
     def initialize(hash = {})
-      @match_id           = hash[:comm_match_id]
-      @static_id          = hash[:comm_static_id]
-      @match_info         = parse_match_info(hash)
-      @match_summary      = parse_match_summary(hash)
-      @match_stats        = parse_match_stats(hash)
-      @local_match_team   = parse_match_teams(hash, :localteam)
-      @visitor_match_team = parse_match_teams(hash, :visitorteam)
-      @commentaries       = parse_comments(hash[:comm_commentaries])
+      @match_id            = hash[:comm_match_id]
+      @static_id           = hash[:comm_static_id]
+      @match_info          = parse_match_info(hash)
+      @match_summary       = parse_match_summary(hash)
+      @match_stats         = parse_match_stats(hash)
+      @local_match_team    = parse_match_teams(hash, :localteam)
+      @visitor_match_team  = parse_match_teams(hash, :visitorteam)
+      @match_bench         = parse_match_bench(hash)
+      @match_substitutions =
+        parse_match_substitutions(hash)
+      @commentaries        = parse_comments(hash[:comm_commentaries])
     end
 
     def parse_match_info(hash = {})
@@ -62,6 +65,20 @@ module FootballApi
       hash[:comment].keys.map{ |key|
         FootballApi::Comment.new(hash[:comment][key])
       }
+    end
+
+    def parse_match_bench(hash = {})
+      return unless hash[:comm_match_subs]
+
+      FootballApi::MatchBench.new(hash[:comm_match_subs]
+                                  .merge(match_id: hash[:comm_match_id]))
+    end
+
+    def parse_match_substitutions(hash)
+      return unless hash[:comm_match_substitutions]
+
+      FootballApi::MatchSubstitutions.new(hash[:comm_match_substitutions]
+                                          .merge(match_id: hash[:comm_match_id]))
     end
   end
 end

@@ -1,5 +1,7 @@
 module FootballApi
   class Event
+    TYPES = %w(yellowcard goal redcard yellowred)
+
     attr_accessor :event_id, :event_match_id, :event_type, :event_minute, :event_team,
                   :event_player, :event_player_id, :event_result
 

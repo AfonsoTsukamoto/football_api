@@ -22,6 +22,8 @@ require 'football_api/match_summary'
 require 'football_api/match_team'
 require 'football_api/player'
 require 'football_api/standing'
+require 'football_api/match_bench'
+require 'football_api/match_substitutions'
 require 'football_api/version'
 
 module FootballApi
