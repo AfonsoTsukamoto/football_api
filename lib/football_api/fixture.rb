@@ -8,12 +8,15 @@ module FootballApi
       attr_accessor :match_date, :from_date, :to_date, :comp_id
 
       def where(options = {})
-        self.comp_id = options.delete(:comp_id)
-        self.match_date = options.delete(:match_date)
-        self.from_date = options.delete(:from_date)
-        self.to_date = options.delete(:to_date)
+        @comp_id = options.delete(:comp_id)
+        @match_date = options.delete(:match_date)
+        @from_date = options.delete(:from_date)
+        @to_date = options.delete(:to_date)
+
+        binding.pry
+
         response.map{ |fixture|
-          new(fixture)
+          new (fixture)
         }
       end
 
@@ -60,7 +63,7 @@ module FootballApi
     end
 
     def parse_match_events(arr = [])
-      arr.map{ |e|
+      Array(arr).map{ |e|
         FootballApi::Event.new(e)
       }
     end

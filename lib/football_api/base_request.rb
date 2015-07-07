@@ -1,7 +1,7 @@
 module FootballApi
   class BaseRequest
     include HTTParty
-
+    debug_output $stdout
     # Disable the use of rails query string format.
     #
     # With rails query string format enabled:
@@ -13,7 +13,7 @@ module FootballApi
     disable_rails_query_string_format
 
     # How many times should we retry the request if Timeout::Error is raised?
-    RETRIES = 5
+    RETRIES = 3
 
     # The API Base URI
     base_uri 'http://football-api.com/'
@@ -23,7 +23,7 @@ module FootballApi
 
     # The default params for every request
     # TODO : Pass key in config
-    default_params 'APIKey' => 'c1b5a86a-b0f6-ab2d-4d01db613b03'
+    default_params 'APIKey' => '69216017-4bb7-96db-0deeadb1b645'
 
     # Default request timeout in seconds. This can be overriden by module configuration.
     default_timeout 15
@@ -35,31 +35,40 @@ module FootballApi
       # simply returns it
       def get!(options = {}, &block)
         attempts ||= RETRIES
-        get("/api/", action_query(options), &block)
+
+        binding.pry
+
+        query = action_query(options)
+        get("/api/", query, &block)
+
       rescue Timeout::Error => e
         puts "Timeout! Retrying... (#{RETRIES - attempts})"
-        (attempts -= 1) > 0 ? retry : raise(FootballApi::RequestError.new, 'Request timeout')
+
+        retry if (attempts -= 1) > 0
+
+        raise FootballApi::RequestError.new('Request timeout')
       end
 
       alias_method :request!, :get!
 
-      # This is an handy method for reponse parsing.
+      # This is an handy method for response parsing.
       # Subclasses that include Requestable can simply use the json_key option
-      # and responde will only contain that field.
-      # It also deep symbolizes the response keys in order to keep things more 'ruby-way'
+      # and response will only contain that field.
+      # It also deep symbolizes the response keys
       def response(options = {})
-        response = get!.deep_symbolize_keys!
-        response[json_id]
+        response = get!(options)
+        response = response ? response.to_hash.deep_symbolize_keys! : Hash.new
+        response.present? ? response[json_id] : response
       end
 
       def action_query(options = {})
-        query = { query: { "Action" => action }.merge(options) }
-        query[:query].merge!(params_from_method) if params_from_method
-        query
+        { query: { "Action" => action }.merge(options) }.tap do |hs|
+          hs[:query].merge!(get_parameters) if params_method
+        end
       end
 
-      def params_from_method
-        self.params_method ? send(params_method) : nil
+      def get_parameters
+        send(params_method)
       end
     end
   end

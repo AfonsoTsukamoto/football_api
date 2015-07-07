@@ -15,7 +15,7 @@ module FootballApi
     attr_accessor :id, :name, :region
 
     def self.all
-      response.map do |comp|
+      response && response.map do |comp|
         new(comp)
       end
     end

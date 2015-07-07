@@ -26,7 +26,11 @@ module FootballApi
       return [] if !hash[:goals] || hash[:goals].is_a?(Array) || !hash[:goals][:player]
 
       hash[:goals][:player].keys.map do |score|
-        FootballApi::Goal.new(hash[:goals][:player][score].merge(score: score.to_s.to_i))
+        if (score.to_s =~ /[0-9]/) != nil
+          FootballApi::Goal.new(hash[:goals][:player][score].merge(score: score.to_s.to_i))
+        else
+          FootballApi::Goal.new(hash[:goals][:player])
+        end
       end
     end
 

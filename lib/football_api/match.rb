@@ -2,16 +2,17 @@ module FootballApi
   class Match < FootballApi::BaseRequest
     include FootballApi::Requestable
 
-    api_options action: :today, action_params: :match_params, json_key: :matches
+    api_options action: :today,
+                action_params: :match_params,
+                json_key: :matches
 
     class << self
       attr_accessor :competition_id
 
       def all_from_competition(competition)
-        self.competition_id = competition.is_a?(Competition) ? competition.id : competition
-        response.map{ |match|
-          new(match)
-        }
+        @competition_id = competition.is_a?(Competition) ? competition.id : competition
+
+        Array(response).map { |match| new(match) }
       end
 
       def match_params
@@ -19,10 +20,11 @@ module FootballApi
       end
     end
 
-    attr_accessor :match_id, :match_comp_id, :match_date, :match_formatted_date, :match_status,
-                  :match_time, :match_commentary_available, :match_localteam_id,
-                  :match_localteam_name, :match_localteam_score, :match_visitorteam_id,
-                  :match_visitorteam_name, :match_visitorteam_score, :match_ht_score
+    attr_accessor :match_id, :match_comp_id, :match_date, :match_formatted_date,
+                  :match_status, :match_time, :match_commentary_available,
+                  :match_localteam_id, :match_localteam_name, :match_ht_score,
+                  :match_localteam_score, :match_visitorteam_id,
+                  :match_visitorteam_name, :match_visitorteam_score
 
     def initialize(hash = {})
       @match_id                   = hash[:match_id]

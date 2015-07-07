@@ -44,6 +44,7 @@ module FootballApi
     end
 
     def parse_match_stats(hash = {})
+      return unless hash[:comm_match_stats].is_a?(Hash)
       hash = hash[:comm_match_stats].merge(id: hash[:comm_match_id])
       FootballApi::MatchStats.new(hash)
     end
@@ -52,7 +53,6 @@ module FootballApi
       team_hash = hash[:comm_match_teams][key][:player]      unless hash[:comm_match_teams][key].blank?
       team_hash.merge!(hash[:comm_match_subs][key][:player]) unless hash[:comm_match_subs][key].blank?
       team_hash.merge!(id: hash[:comm_match_id])
-      binding.pry
       FootballApi::MatchTeam.new(team_hash)
     end
 
