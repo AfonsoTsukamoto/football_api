@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 RSpec.describe FootballApi::Commentary do
-  let(:match_id) { 1788007 }
+  let(:match_req_id) { '1967248' }
   let(:default)  { JSONHelper::Commentaries.get(:default) }
   let(:uri) {
-    "#{@base_url}/api/?APIKey=#{@api_key}&Action=commentaries&match_id=#{match_id}"
+    "#{@base_url}/api/?APIKey=#{@api_key}&Action=commentaries&match_id=#{match_req_id}"
   }
 
   before do
@@ -16,9 +16,8 @@ RSpec.describe FootballApi::Commentary do
   describe '.all_from_match' do
     it 'sets match id' do
       res = FootballApi::Commentary.all_from_match(match_id)
-
       expect(res).not_to be_nil
-      expect(res.static_id).to eq(match_id)
+      expect(res.match_id).to eq(match_id)
     end
   end
 end
