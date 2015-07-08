@@ -6,6 +6,7 @@ module FootballApi
 
     def initialize(hash = {})
       return {} unless TYPE.include?(hash[:type])
+
       @type = hash[:type]
       @minute = hash[:minute]
       @player = parse_player(hash)
