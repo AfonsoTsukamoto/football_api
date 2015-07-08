@@ -17,13 +17,12 @@ RSpec.describe FootballApi::Commentary do
   describe '.all_from_match' do
     it 'sets match id' do
       res = FootballApi::Commentary.all_from_match(match_id)
+
       # TODO: Really weird. while asking for the game 1788007, api
       # returns
       # { match_id: "1788007", comm_static_id: "1755579" }
       # and then comm_static_id is on the actual match... fuckin no sense!
       # Gotta find a turn around (changing api??)
-
-      binding.pry
 
       expect(res).not_to be_nil
       expect(res.static_id.to_i).to eq(static_id)
