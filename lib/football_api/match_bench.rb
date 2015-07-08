@@ -18,9 +18,7 @@ module FootballApi
       return unless opts.present?
 
       @team = key
-      @players = opts[:player].values.map do |v|
-        Player.new(v)
-      end
+      @players = Array(opts[:player]).map { |v| Player.new(v) }
     end
   end
 end

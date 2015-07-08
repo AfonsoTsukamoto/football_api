@@ -6,9 +6,7 @@ module FootballApi
     end
 
     def parse_players(hash = {})
-      hash.keys.map{ |k|
-        FootballApi::Player.new(hash[k])
-      }
+      Array(hash[:player]).map { |player| FootballApi::Player.new(player) }
     end
   end
 end

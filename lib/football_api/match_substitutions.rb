@@ -7,11 +7,8 @@ module FootballApi
     end
 
     def subs(hash, key)
-      return unless hash[key]
-
-      Hash(hash[key][:substitution]).values.map do |s|
-        Substitution.new(s)
-      end
+      return [] unless hash[key]
+      Array(hash[key][:substitution]).map { |s| Substitution.new(s) }
     end
   end
 

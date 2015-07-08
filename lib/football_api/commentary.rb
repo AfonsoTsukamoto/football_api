@@ -9,9 +9,9 @@ module FootballApi
 
       def all_from_match(match)
         @match_id = match.is_a?(Match) ? match.id : match
-        res = response
 
-        res.map{ |commentary| new(commentary) }.first
+        res = response
+        res.map { |commentary| new(commentary) }.first
       end
 
       def commentary_params
@@ -32,8 +32,7 @@ module FootballApi
       @local_match_team    = parse_match_teams(hash, :localteam)
       @visitor_match_team  = parse_match_teams(hash, :visitorteam)
       @match_bench         = parse_match_bench(hash)
-      @match_substitutions =
-        parse_match_substitutions(hash)
+      @match_substitutions = parse_match_substitutions(hash)
       @commentaries        = parse_comments(hash[:comm_commentaries])
     end
 
@@ -54,8 +53,8 @@ module FootballApi
     end
 
     def parse_match_teams(hash = {}, key)
-      team_hash = hash[:comm_match_teams][key][:player]      unless hash[:comm_match_teams][key].blank?
-      team_hash.merge!(hash[:comm_match_subs][key][:player]) unless hash[:comm_match_subs][key].blank?
+      team_hash = hash[:comm_match_teams][key]      unless hash[:comm_match_teams][key].blank?
+      team_hash.merge!(hash[:comm_match_subs][key]) unless hash[:comm_match_subs][key].blank?
       team_hash.merge!(id: hash[:comm_match_id])
       FootballApi::MatchTeam.new(team_hash)
     end
@@ -63,9 +62,7 @@ module FootballApi
     def parse_comments(hash = {})
       return unless hash[:comment]
 
-      hash[:comment].keys.map{ |key|
-        FootballApi::Comment.new(hash[:comment][key])
-      }
+      Array(hash[:comment]).map{ |comment| FootballApi::Comment.new(comment) }
     end
 
     def parse_match_bench(hash = {})

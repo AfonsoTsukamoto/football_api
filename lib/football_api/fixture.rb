@@ -61,9 +61,7 @@ module FootballApi
     end
 
     def parse_match_events(arr = [])
-      Array(arr).map{ |e|
-        FootballApi::Event.new(e)
-      }
+      Array(arr).map { |e| FootballApi::Event.new(e) }
     end
   end
 end
