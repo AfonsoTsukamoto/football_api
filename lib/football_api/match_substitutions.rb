@@ -1,5 +1,8 @@
 module FootballApi
   class MatchSubstitutions
+
+    attr_accessor :match_id, :local_team, :visitor_team
+
     def initialize(hash = {})
       @match_id     = hash[:match_id]
       @local_team   = subs(hash, :localteam)

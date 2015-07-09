@@ -5,12 +5,15 @@ module FootballApi
 
     def initialize(hash = {})
       @match_id     = hash[:match_id]
-      @local_team   = Bench.new(hash, :local_team)
+      @local_team   = Bench.new(hash, :localteam)
       @visitor_team = Bench.new(hash, :visitorteam)
     end
   end
 
   class Bench
+
+    attr_accessor :team, :players
+
     def initialize(opts = {}, key)
       # XXX - Use case for more than one player, might be different
       # Api returns single object without number index on single occurrence.

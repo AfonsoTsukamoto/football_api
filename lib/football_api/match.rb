@@ -20,14 +20,16 @@ module FootballApi
       end
     end
 
-    attr_accessor :match_id, :match_comp_id, :match_date, :match_formatted_date,
-                  :match_status, :match_time, :match_commentary_available,
-                  :match_localteam_id, :match_localteam_name, :match_ht_score,
+    attr_accessor :match_id, :static_id, :match_comp_id, :match_date,
+                  :match_formatted_date, :match_status, :match_time,
+                  :match_commentary_available, :match_ht_score,
+                  :match_localteam_id, :match_localteam_name,
                   :match_localteam_score, :match_visitorteam_id,
                   :match_visitorteam_name, :match_visitorteam_score
 
     def initialize(hash = {})
       @match_id                   = hash[:match_id]
+      @static_id                  = hash[:match_static_id]
       @match_comp_id              = hash[:match_comp_id]
       @match_date                 = hash[:match_date]
       @match_formatted_date       = hash[:match_formatted_date]

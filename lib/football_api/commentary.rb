@@ -53,10 +53,7 @@ module FootballApi
     end
 
     def parse_match_teams(hash = {}, key)
-      team_hash = hash[:comm_match_teams][key]      unless hash[:comm_match_teams][key].blank?
-      team_hash.merge!(hash[:comm_match_subs][key]) unless hash[:comm_match_subs][key].blank?
-      team_hash.merge!(id: hash[:comm_match_id])
-      FootballApi::MatchTeam.new(team_hash)
+      FootballApi::MatchTeam.new(hash, key)
     end
 
     def parse_comments(hash = {})
