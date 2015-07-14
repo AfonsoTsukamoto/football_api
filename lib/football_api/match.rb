@@ -25,7 +25,11 @@ module FootballApi
                   :match_commentary_available, :match_ht_score,
                   :match_localteam_id, :match_localteam_name,
                   :match_localteam_score, :match_visitorteam_id,
-                  :match_visitorteam_name, :match_visitorteam_score
+                  :match_visitorteam_name, :match_visitorteam_score,
+                  :match_venue_city_beta, :match_venue_id_beta,
+                  :match_venue_beta, :match_week_beta, :match_season_beta,
+                  :match_et_score, :match_ft_score
+
 
     def initialize(hash = {})
       @match_id                   = hash[:match_id]
@@ -43,6 +47,13 @@ module FootballApi
       @match_visitorteam_name     = hash[:match_visitorteam_name]
       @match_visitorteam_score    = hash[:match_visitorteam_score]
       @match_ht_score             = hash[:match_ht_score]
+      @match_ft_score             = hash[:match_ft_score]
+      @match_et_score             = hash[:match_et_score]
+      @match_season_beta          = hash[:match_season_beta]
+      @match_week_beta            = hash[:match_week_beta]
+      @match_venue_beta           = hash[:match_venue_beta]
+      @match_venue_id_beta        = hash[:match_venue_id_beta]
+      @match_venue_city_beta      = hash[:match_venue_city_beta]
     end
   end
 end

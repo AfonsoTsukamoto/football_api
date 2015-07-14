@@ -1,5 +1,5 @@
-{ "default":
-  {
+{
+  "default": {
     "APIVersion": 1,
     "APIRequestsRemaining": 995,
     "DeveloperAuthentication": "TRUE",
@@ -209,7 +209,7 @@
               },
               "10": {
                 "number": "14",
-                "name": "Javier Hern\u00e1ndez",
+                "name": "Javier Hernández",
                 "pos": "F",
                 "id": "53937"
               },
@@ -390,7 +390,7 @@
           "localteam": {
             "substitution": {
               "1": {
-                "off": "Javier Hern\u00e1ndez",
+                "off": "Javier Hernández",
                 "on": "Nani",
                 "minute": "45",
                 "on_id": "4647",
@@ -479,7 +479,7 @@
               "important": "False",
               "isgoal": "False",
               "minute": "87'",
-              "comment": "Offside, Swansea City. Angel Rangel tries a through ball, but Baf\u00e9timbi Gomis is caught offside.",
+              "comment": "Offside, Swansea City. Angel Rangel tries a through ball, but Bafétimbi Gomis is caught offside.",
               "id": "7626766"
             },
             "7": {
@@ -528,7 +528,7 @@
               "important": "False",
               "isgoal": "False",
               "minute": "83'",
-              "comment": "Baf\u00e9timbi Gomis (Swansea City) wins a free kick in the attacking half.",
+              "comment": "Bafétimbi Gomis (Swansea City) wins a free kick in the attacking half.",
               "id": "7626703"
             },
             "14": {
@@ -591,14 +591,14 @@
               "important": "False",
               "isgoal": "False",
               "minute": "78'",
-              "comment": "Attempt blocked. Baf\u00e9timbi Gomis (Swansea City) left footed shot from outside the box is blocked. Assisted by Ashley Williams with a headed pass.",
+              "comment": "Attempt blocked. Bafétimbi Gomis (Swansea City) left footed shot from outside the box is blocked. Assisted by Ashley Williams with a headed pass.",
               "id": "7626688"
             },
             "23": {
               "important": "False",
               "isgoal": "False",
               "minute": "77'",
-              "comment": "Substitution, Swansea City. Baf\u00e9timbi Gomis replaces Wilfried Bony.",
+              "comment": "Substitution, Swansea City. Bafétimbi Gomis replaces Wilfried Bony.",
               "id": "7626681"
             },
             "24": {
@@ -885,7 +885,7 @@
               "important": "False",
               "isgoal": "False",
               "minute": "45'",
-              "comment": "Substitution, Manchester United. Nani replaces Javier Hern\u00e1ndez.",
+              "comment": "Substitution, Manchester United. Nani replaces Javier Hernández.",
               "id": "7626595"
             },
             "65": {
@@ -969,7 +969,7 @@
               "important": "False",
               "isgoal": "False",
               "minute": "36'",
-              "comment": "Foul by Javier Hern\u00e1ndez (Manchester United).",
+              "comment": "Foul by Javier Hernández (Manchester United).",
               "id": "7626554"
             },
             "77": {
@@ -1025,7 +1025,7 @@
               "important": "False",
               "isgoal": "False",
               "minute": "32'",
-              "comment": "Hand ball by Javier Hern\u00e1ndez (Manchester United).",
+              "comment": "Hand ball by Javier Hernández (Manchester United).",
               "id": "7626533"
             },
             "85": {
@@ -1095,7 +1095,7 @@
               "important": "False",
               "isgoal": "False",
               "minute": "22'",
-              "comment": "Javier Hern\u00e1ndez (Manchester United) wins a free kick on the right wing.",
+              "comment": "Javier Hernández (Manchester United) wins a free kick on the right wing.",
               "id": "7626515"
             },
             "95": {
@@ -1123,7 +1123,7 @@
               "important": "False",
               "isgoal": "False",
               "minute": "17'",
-              "comment": "Attempt blocked. Wayne Rooney (Manchester United) right footed shot from outside the box is blocked. Assisted by Javier Hern\u00e1ndez.",
+              "comment": "Attempt blocked. Wayne Rooney (Manchester United) right footed shot from outside the box is blocked. Assisted by Javier Hernández.",
               "id": "7626506"
             },
             "99": {
@@ -1404,7 +1404,7 @@
               },
               "10": {
                 "num": "14",
-                "name": "Javier Hern\u00e1ndez",
+                "name": "Javier Hernández",
                 "pos": "CF-R",
                 "posx": "5",
                 "posy": "5",

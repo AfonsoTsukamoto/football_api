@@ -1,0 +1,23 @@
+{
+  "all": {
+    "APIVersion": 1,
+    "APIRequestsRemaining": 1000,
+    "DeveloperAuthentication": "TRUE",
+    "Competition": [
+      {
+        "id": "1204",
+        "name": "Premier League",
+        "region": "England"
+      }
+    ],
+    "Action": "competitions",
+    "Params": {
+      "Action": "competitions"
+    },
+    "ComputationTime": 0.011882066726685,
+    "IP": "79.168.234.158",
+    "ERROR": "OK",
+    "ServerName": "Football-API",
+    "ServerAddress": "http://football-api.com/api"
+  }
+}
