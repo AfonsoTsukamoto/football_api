@@ -1,6 +1,8 @@
 module FootballApi
   class BaseRequest
     include HTTParty
+    include Symbolizer
+
     debug_output $stdout
     # Disable the use of rails query string format.
     #
@@ -56,8 +58,7 @@ module FootballApi
         response = get!(options)
 
         response = Hash.new unless response
-        response = deep_symbolize_football_api(response.to_hash.deep_symbolize_keys!)
-
+        response = custom_deep_symbolic_hash(response)
         response.present? ? response[json_id] : response
       end
 
@@ -69,43 +70,6 @@ module FootballApi
 
       def get_parameters
         send(params_method)
-      end
-
-      # Afonso i need this to go to a mixin but i cant make it work :(
-        def hash_or_array_keys
-          [:player, :substitution, :comment]
-        end
-
-      # Since the goals come as an hash like:
-      # => { '1': { ... }, '2': { ... } }
-      # the only way to have the score is by interpolating the keys.
-      # Ugly? yup! as f*ck!
-      def deep_symbolize_football_api(hash)
-        {}.tap { |h| hash.each { |key, value| h[key] = map_value(key, value) } }
-      end
-
-      def map_value(key, thing)
-        case thing
-        when Array
-          thing.map { |v| map_value(nil, v) }
-        when Hash
-          return deep_symbolize_football_api(thing) unless hash_or_array_keys.include?(key)
-          map_value(nil, array_or_hash_with_indiferent_access(thing))
-        else
-          thing
-        end
-      end
-
-      def array_or_hash_with_indiferent_access(hash = {})
-        return [] if !hash.is_a?(Hash)
-
-        hash.keys.map do |key|
-          if (key.to_s =~ /[0-9]/) != nil
-            hash[key]
-          else
-            return [hash]
-          end
-        end
       end
     end
   end
