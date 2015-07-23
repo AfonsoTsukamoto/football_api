@@ -4,9 +4,9 @@ module FootballApi
       base.extend(ClassMethods)
     end
 
-    HASH_OR_ARRAY_KEYS = [:player, :substitution, :comment].freeze
+    HASH_OR_ARRAY_KEYS = %i(player substitution comment)
+
     module ClassMethods
-      # Since the goals come as an hash like:
       # Custom deep symbolize of an hash
       # So we can override the mess of some footbal-api arrays
       def custom_deep_symbolic_hash(hash)
@@ -26,15 +26,15 @@ module FootballApi
       end
 
       # Recursive way of checking all hash
-      def map_value(key, thing)
-        case thing
+      def map_value(key, value)
+        case value
         when Array
-          thing.map { |v| map_value(nil, v) }
+          value.map { |v| map_value(nil, v) }
         when Hash
-          return custom_deep_symbolic_hash(thing) unless is_a_custom_key?(key)
-          map_value(nil, array_from_mess(thing))
+          return custom_deep_symbolic_hash(value) unless is_a_custom_key?(key)
+          map_value(nil, array_from_mess(value))
         else
-          thing
+          value
         end
       end
 
@@ -42,17 +42,17 @@ module FootballApi
         HASH_OR_ARRAY_KEYS.include?(key)
       end
 
-      # Since the custom keys come as an hash like:
-      # => { '1': { ... }, '2': { ... } }
+      # Since the custom keys come as an hash like: => { '1': { ... }, '2': { ... } }
       # OR!
       # A simple object from the root
       # We need to unify the return value and return a simple array of objects
       # Ugly? yup! as f*ck!
       def array_from_mess(hash)
-        hash.keys.map do |key|
-          return [hash] unless (key.to_s =~ /[0-9]/)
-          hash[key]
-        end
+        return key_contains_object?(hash.keys.first) ? [hash] : hash.values
+      end
+
+      def key_contains_object?(key)
+        (key.to_s =~ /[0-9]/) == nil
       end
     end
   end

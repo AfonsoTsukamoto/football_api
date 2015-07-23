@@ -1,7 +1,7 @@
 module FootballApi
   class BaseRequest
     include HTTParty
-    include Symbolizer
+    include FootballApi::Symbolizer
 
     debug_output $stdout
     # Disable the use of rails query string format.
@@ -55,11 +55,10 @@ module FootballApi
       # and response will only contain that field.
       # It also deep symbolizes the response keys
       def response(options = {})
-        response = get!(options)
+        data = get!(options) || Hash.new
 
-        response = Hash.new unless response
-        response = custom_deep_symbolic_hash(response)
-        response.present? ? response[json_id] : response
+        data = custom_deep_symbolic_hash(data)
+        data.present? ? data[json_id] : data
       end
 
       def action_query(options = {})
