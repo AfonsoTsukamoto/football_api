@@ -3,7 +3,7 @@ module FootballApi
     include HTTParty
     include FootballApi::Symbolizer
 
-    debug_output $stdout
+    debug_output $stdout if ENV.fetch('DEBUG', false)
     # Disable the use of rails query string format.
     #
     # With rails query string format enabled:

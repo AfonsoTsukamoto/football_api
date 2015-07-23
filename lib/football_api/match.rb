@@ -9,6 +9,11 @@ module FootballApi
     class << self
       attr_accessor :competition_id
 
+      def today
+        @competition_id = nil
+        Array(response).map { |match| new(match) }
+      end
+
       def all_from_competition(competition)
         @competition_id = competition.is_a?(Competition) ? competition.id : competition
 
@@ -16,7 +21,7 @@ module FootballApi
       end
 
       def match_params
-        { comp_id: self.competition_id }
+        self.competition_id ? { comp_id: self.competition_id} : {}
       end
     end
 
