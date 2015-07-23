@@ -3,8 +3,8 @@ module FootballApi
     include FootballApi::Requestable
 
     api_options action: :today,
-                action_params: :match_params,
-                json_key: :matches
+    action_params: :match_params,
+    json_key: :matches
 
     class << self
       attr_accessor :competition_id
@@ -16,7 +16,7 @@ module FootballApi
       end
 
       def match_params
-        { comp_id: self.competition_id}
+        { comp_id: self.competition_id }
       end
     end
 
@@ -54,6 +54,11 @@ module FootballApi
       @match_venue_beta           = hash[:match_venue_beta]
       @match_venue_id_beta        = hash[:match_venue_id_beta]
       @match_venue_city_beta      = hash[:match_venue_city_beta]
+      @match_events               = parse_match_events(hash[:match_events])
+    end
+
+    def parse_match_events(arr = [])
+      Array(arr).map { |e| FootballApi::Event.new(e) }
     end
   end
 end

@@ -4,7 +4,7 @@ module FootballApi
       base.extend(ClassMethods)
     end
 
-    HASH_OR_ARRAY_KEYS = %i(player substitution comment)
+    HASH_OR_ARRAY_KEYS = %i(player substitution comment match_events)
 
     module ClassMethods
       # Custom deep symbolize of an hash
