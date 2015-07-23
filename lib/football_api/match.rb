@@ -3,8 +3,8 @@ module FootballApi
     include FootballApi::Requestable
 
     api_options action: :today,
-    action_params: :match_params,
-    json_key: :matches
+                action_params: :match_params,
+                json_key: :matches
 
     class << self
       attr_accessor :competition_id
@@ -33,7 +33,7 @@ module FootballApi
                   :match_visitorteam_name, :match_visitorteam_score,
                   :match_venue_city_beta, :match_venue_id_beta,
                   :match_venue_beta, :match_week_beta, :match_season_beta,
-                  :match_et_score, :match_ft_score
+                  :match_et_score, :match_ft_score, :match_events
 
 
     def initialize(hash = {})
