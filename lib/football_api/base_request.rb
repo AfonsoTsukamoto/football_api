@@ -24,8 +24,7 @@ module FootballApi
     format :json
 
     # The default params for every request
-    # TODO : Pass key in config
-    default_params 'APIKey' => '69216017-4bb7-96db-0deeadb1b645'
+    default_params 'APIKey' => ENV.fetch('FOOTBALL_API_KEY', '')
 
     # Default request timeout in seconds. This can be overriden by module configuration.
     default_timeout 15
