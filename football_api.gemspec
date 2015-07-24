@@ -27,10 +27,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.2', '>= 3.2.0'
   spec.add_development_dependency 'webmock', '~> 1.21', '>= 1.21.0'
 
-  spec.add_dependency 'dotenv'
+  spec.add_dependency 'dotenv', '~> 2.0.2'
   spec.add_dependency 'activesupport', '~> 4.1'
   spec.add_dependency 'httparty', '~> 0.13', '>= 0.13.0'
   spec.add_dependency 'colored', '~> 1.2'
   spec.add_dependency 'tzinfo', '~> 1.1', '>= 1.1.0'
-  spec.add_dependency 'eventmachine', '~> 1.0', '>= 1.0.3'
 end

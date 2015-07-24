@@ -3,7 +3,7 @@ module FootballApi
     include HTTParty
     include FootballApi::Symbolizer
 
-    debug_output $stdout
+    debug_output $stdout if ENV.fetch('DEBUG', false)
     # Disable the use of rails query string format.
     #
     # With rails query string format enabled:
@@ -24,8 +24,7 @@ module FootballApi
     format :json
 
     # The default params for every request
-    # TODO : Pass key in config
-    default_params 'APIKey' => '69216017-4bb7-96db-0deeadb1b645'
+    default_params 'APIKey' => ENV.fetch('FOOTBALL_API_KEY', '')
 
     # Default request timeout in seconds. This can be overriden by module configuration.
     default_timeout 15

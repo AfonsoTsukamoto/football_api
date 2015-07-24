@@ -9,6 +9,11 @@ module FootballApi
     class << self
       attr_accessor :competition_id
 
+      def today
+        @competition_id = nil
+        Array(response).map { |match| new(match) }
+      end
+
       def all_from_competition(competition)
         @competition_id = competition.is_a?(Competition) ? competition.id : competition
 
@@ -16,7 +21,7 @@ module FootballApi
       end
 
       def match_params
-        { comp_id: self.competition_id}
+        self.competition_id ? { comp_id: self.competition_id} : {}
       end
     end
 
@@ -28,7 +33,7 @@ module FootballApi
                   :match_visitorteam_name, :match_visitorteam_score,
                   :match_venue_city_beta, :match_venue_id_beta,
                   :match_venue_beta, :match_week_beta, :match_season_beta,
-                  :match_et_score, :match_ft_score
+                  :match_et_score, :match_ft_score, :match_events
 
 
     def initialize(hash = {})
@@ -54,6 +59,11 @@ module FootballApi
       @match_venue_beta           = hash[:match_venue_beta]
       @match_venue_id_beta        = hash[:match_venue_id_beta]
       @match_venue_city_beta      = hash[:match_venue_city_beta]
+      @match_events               = parse_match_events(hash[:match_events])
+    end
+
+    def parse_match_events(arr = [])
+      Array(arr).map { |e| FootballApi::Event.new(e) }
     end
   end
 end
