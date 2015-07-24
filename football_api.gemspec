@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.2', '>= 3.2.0'
   spec.add_development_dependency 'webmock', '~> 1.21', '>= 1.21.0'
 
-  spec.add_dependency 'dotenv', '~> 2.0.2'
+  spec.add_dependency 'dotenv', '= 0.9.0' # To allow rails 3
   spec.add_dependency 'activesupport', '~> 4.1'
   spec.add_dependency 'httparty', '~> 0.13', '>= 0.13.0'
   spec.add_dependency 'colored', '~> 1.2'
