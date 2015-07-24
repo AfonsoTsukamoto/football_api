@@ -2,12 +2,12 @@ require 'spec_helper'
 
 RSpec.describe FootballApi::Standing do
   context 'league standings' do
-    let(:response) { JSONHelper::Standings.get(:default) }
+    let(:response_json) { JSONHelper::Standings.get(:default) }
     let(:competition_id) { 1204 }
 
     let(:uri) do
-      "#{@base_url}/api/?APIKey=#{@api_key}&Action=standings&" \
-      "comp_id=#{competition_id}"
+      "#{@base_url}/api/?APIKey=#{@api_key}&Action=standings"\
+      "&comp_id=#{competition_id}"
     end
 
     let(:response) do
@@ -17,7 +17,7 @@ RSpec.describe FootballApi::Standing do
     before(:each) do
       stub_request(:get, uri)
         .with(headers: @headers)
-        .to_return(status: 200, body: response.to_json)
+        .to_return(status: 200, body: response_json.to_json)
     end
 
     describe '.all_from_competition' do
@@ -43,7 +43,7 @@ RSpec.describe FootballApi::Standing do
   end
 
   context 'champions_league standings' do
-    let(:response) { JSONHelper::Standings.get(:champions_league) }
+    let(:response_json) { JSONHelper::Standings.get(:champions_league) }
     let(:competition_id) { 1005 }
 
     let(:uri) do
@@ -54,7 +54,7 @@ RSpec.describe FootballApi::Standing do
     before(:each) do
       stub_request(:get, uri)
         .with(headers: @headers)
-        .to_return(status: 200, body: response.to_json)
+        .to_return(status: 200, body: response_json.to_json)
     end
 
     let(:response) do
