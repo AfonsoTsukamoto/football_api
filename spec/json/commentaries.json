@@ -1963,5 +1963,1244 @@
     "ERROR": "OK",
     "ServerName": "Football-API",
     "ServerAddress": "http://football-api.com/api"
+  },
+  "visitorteam_with_all_events": {
+    "APIVersion": 1,
+    "APIRequestsRemaining": 998,
+    "DeveloperAuthentication": "TRUE",
+    "commentaries": [
+      {
+        "comm_match_id": "1808514",
+        "comm_static_id": "1926053",
+        "comm_match_info": {
+          "stadium": {
+            "name": "Stockhorn Arena"
+          },
+          "attendance": {
+            "name": ""
+          },
+          "time": {
+            "name": "Comments"
+          },
+          "referee": {
+            "name": ""
+          }
+        },
+        "comm_match_summary": {
+          "localteam": {
+            "goals": {
+              "player": {
+                "1": {
+                  "name": "Nelson Ferreira",
+                  "minute": "72",
+                  "owngoal": "False",
+                  "penalty": "False",
+                  "id": "11472"
+                },
+                "2": {
+                  "name": "Nelson Ferreira",
+                  "minute": "40",
+                  "owngoal": "False",
+                  "penalty": "False",
+                  "id": "11472"
+                }
+              }
+            },
+            "yellowcards": {
+              "player": {
+                "1": {
+                  "name": "Nelson Ferreira",
+                  "minute": "40",
+                  "id": "11472"
+                },
+                "2": {
+                  "name": "Lotem Zino",
+                  "minute": "47",
+                  "id": "205174"
+                },
+                "3": {
+                  "name": "Fulvio Sulmoni",
+                  "minute": "61",
+                  "id": "37153"
+                }
+              }
+            },
+            "redcards": []
+          },
+          "visitorteam": {
+            "goals": {
+              "player": {
+                "name": "John Ogu",
+                "minute": "6",
+                "owngoal": "False",
+                "penalty": "False",
+                "id": "45596"
+              }
+            },
+            "yellowcards": {
+              "player": {
+                "1": {
+                  "name": "Ofir Davidadza",
+                  "minute": "55",
+                  "id": "115179"
+                },
+                "2": {
+                  "name": "William Soares",
+                  "minute": "63",
+                  "id": ""
+                }
+              }
+            },
+            "redcards": {
+              "player": {
+                "name": "Shir Tzedek",
+                "minute": "20",
+                "id": ""
+              }
+            }
+          }
+        },
+        "comm_match_stats": [],
+        "comm_match_teams": {
+          "localteam": {
+            "player": {
+              "1": {
+                "number": "5",
+                "name": "Fulvio Sulmoni",
+                "pos": "D",
+                "id": "37153"
+              },
+              "2": {
+                "number": "7",
+                "name": "Gianluca Frontino",
+                "pos": "D",
+                "id": "85658"
+              },
+              "3": {
+                "number": "26",
+                "name": "Thomas Reinmann",
+                "pos": "D",
+                "id": "34854"
+              },
+              "4": {
+                "number": "31",
+                "name": "Stefan Glarner",
+                "pos": "D",
+                "id": "20607"
+              },
+              "5": {
+                "number": "10",
+                "name": "Marcos Rojas",
+                "pos": "M",
+                "id": "69360"
+              },
+              "6": {
+                "number": "13",
+                "name": "Simone Rapp",
+                "pos": "M",
+                "id": "162908"
+              },
+              "7": {
+                "number": "21",
+                "name": "Nelson Ferreira",
+                "pos": "M",
+                "id": "11472"
+              },
+              "8": {
+                "number": "28",
+                "name": "Andreas Wittwer",
+                "pos": "M",
+                "id": "85678"
+              },
+              "9": {
+                "number": "15",
+                "name": "Lotem Zino",
+                "pos": "F",
+                "id": "205174"
+              },
+              "10": {
+                "number": "17",
+                "name": "Dennis Hediger",
+                "pos": "F",
+                "id": "37181"
+              },
+              "11": {
+                "number": "1",
+                "name": "Guillaume Faivre",
+                "pos": "G",
+                "id": "11384"
+              }
+            }
+          },
+          "visitorteam": {
+            "player": {
+              "1": {
+                "number": "2",
+                "name": "Ben Bitton",
+                "pos": "D",
+                "id": "366929"
+              },
+              "2": {
+                "number": "5",
+                "name": "Shir Tzedek",
+                "pos": "D",
+                "id": ""
+              },
+              "3": {
+                "number": "7",
+                "name": "Mahran Radi",
+                "pos": "D",
+                "id": ""
+              },
+              "4": {
+                "number": "25",
+                "name": "William Soares",
+                "pos": "D",
+                "id": ""
+              },
+              "5": {
+                "number": "10",
+                "name": "Elianiv Barda",
+                "pos": "M",
+                "id": "13743"
+              },
+              "6": {
+                "number": "11",
+                "name": "Michael McGovern",
+                "pos": "M",
+                "id": ""
+              },
+              "7": {
+                "number": "12",
+                "name": "Ovidiu Hoban",
+                "pos": "M",
+                "id": ""
+              },
+              "8": {
+                "number": "13",
+                "name": "Ofir Davidadza",
+                "pos": "M",
+                "id": "115179"
+              },
+              "9": {
+                "number": "24",
+                "name": "Maor Melikson",
+                "pos": "F",
+                "id": "91882"
+              },
+              "10": {
+                "number": "30",
+                "name": "John Ogu",
+                "pos": "F",
+                "id": "45596"
+              },
+              "11": {
+                "number": "1",
+                "name": "Dudu Goresh",
+                "pos": "G",
+                "id": ""
+              }
+            }
+          }
+        },
+        "comm_match_subs": {
+          "localteam": {
+            "player": {
+              "1": {
+                "number": "4",
+                "name": "Marco Bürki",
+                "pos": "D",
+                "id": "245613"
+              },
+              "2": {
+                "number": "14",
+                "name": "Nicolas Schindelholz",
+                "pos": "D",
+                "id": "85672"
+              },
+              "3": {
+                "number": "27",
+                "name": "Enrico Schirinzi",
+                "pos": "M",
+                "id": "41549"
+              },
+              "4": {
+                "number": "9",
+                "name": "Jonathan Brown",
+                "pos": "F",
+                "id": ""
+              },
+              "5": {
+                "number": "19",
+                "name": "Gaetan Karlen",
+                "pos": "F",
+                "id": "189508"
+              },
+              "6": {
+                "number": "20",
+                "name": "Ridge Munsy",
+                "pos": "F",
+                "id": "177348"
+              },
+              "7": {
+                "number": "18",
+                "name": "Francesco Ruberto",
+                "pos": "G",
+                "id": "301468"
+              }
+            }
+          },
+          "visitorteam": {
+            "player": {
+              "1": {
+                "number": "17",
+                "name": "Matan Ohayon",
+                "pos": "D",
+                "id": ""
+              },
+              "2": {
+                "number": "20",
+                "name": "Loai Taha",
+                "pos": "D",
+                "id": ""
+              },
+              "3": {
+                "number": "15",
+                "name": "Roei Gornada",
+                "pos": "M",
+                "id": ""
+              },
+              "4": {
+                "number": "36",
+                "name": "Nofn Noln",
+                "pos": "M",
+                "id": ""
+              },
+              "5": {
+                "number": "9",
+                "name": "Anthony Nuatuzor Nwakaeme",
+                "pos": "F",
+                "id": ""
+              },
+              "6": {
+                "number": "27",
+                "name": "Ben Sahar",
+                "pos": "F",
+                "id": ""
+              },
+              "7": {
+                "number": "3",
+                "name": "Ben Turjman",
+                "pos": "D",
+                "id": ""
+              }
+            }
+          }
+        },
+        "comm_match_substitutions": {
+          "localteam": {
+            "substitution": {
+              "1": {
+                "off": "Stefan Glarner",
+                "on": "Enrico Schirinzi",
+                "minute": "60",
+                "on_id": "41549",
+                "off_id": "20607"
+              },
+              "2": {
+                "off": "Gianluca Frontino",
+                "on": "Ridge Munsy",
+                "minute": "85",
+                "on_id": "177348",
+                "off_id": "85658"
+              },
+              "3": {
+                "off": "Marcos Rojas",
+                "on": "Marco Bürki",
+                "minute": "90",
+                "on_id": "245613",
+                "off_id": "69360"
+              }
+            }
+          },
+          "visitorteam": {
+            "substitution": {
+              "1": {
+                "off": "Maor Melikson",
+                "on": "Anthony Nuatuzor Nwakaeme",
+                "minute": "83",
+                "on_id": "",
+                "off_id": "91882"
+              },
+              "2": {
+                "off": "Ovidiu Hoban",
+                "on": "Ben Sahar",
+                "minute": "75",
+                "on_id": "",
+                "off_id": ""
+              },
+              "3": {
+                "off": "Elianiv Barda",
+                "on": "Loai Taha",
+                "minute": "39",
+                "on_id": "",
+                "off_id": "13743"
+              }
+            }
+          }
+        },
+        "comm_commentaries": {
+          "comment": {
+            "1": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "85'",
+              "comment": "Ridge Munsy (FC Thun) Substitution at 85'",
+              "id": "22725417"
+            },
+            "2": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "83'",
+              "comment": "Anthony Nuatuzor Nwakaeme (Hapoel Be'er Sheva) Substitution at 83'",
+              "id": "22725416"
+            },
+            "3": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "75'",
+              "comment": "Ben Sahar (Hapoel Be'er Sheva) Substitution at 75'",
+              "id": "22725415"
+            },
+            "4": {
+              "important": "True",
+              "isgoal": "False",
+              "minute": "72'",
+              "comment": "Nelson Ferreira (FC Thun) Goal at 72'",
+              "id": "22725414"
+            },
+            "5": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "63'",
+              "comment": "William Soares (Hapoel Be'er Sheva) Yellow Card at 63'",
+              "id": "22725413"
+            },
+            "6": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "61'",
+              "comment": "Fulvio Sulmoni (FC Thun) Yellow Card at 61'",
+              "id": "22725412"
+            },
+            "7": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "60'",
+              "comment": "Enrico Schirinzi (FC Thun) Substitution at 60'",
+              "id": "22725411"
+            },
+            "8": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "55'",
+              "comment": "Ofir Davidadza (Hapoel Be'er Sheva) Yellow Card at 55'",
+              "id": "22725410"
+            },
+            "9": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "54'",
+              "comment": "Nelson Ferreira (FC Thun) Yellow Card at 54'",
+              "id": "22725409"
+            },
+            "10": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "47'",
+              "comment": "Lotem Zino (FC Thun) Yellow Card at 47'",
+              "id": "22725408"
+            },
+            "11": {
+              "important": "True",
+              "isgoal": "False",
+              "minute": "40'",
+              "comment": "Nelson Ferreira (FC Thun) Goal at 40'",
+              "id": "22725407"
+            },
+            "12": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "39'",
+              "comment": "Loai Taha (Hapoel Be'er Sheva) Substitution at 39'",
+              "id": "22725406"
+            },
+            "13": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "20'",
+              "comment": "Shir Tzedek (Hapoel Be'er Sheva) Red Card at 20'",
+              "id": "22725405"
+            },
+            "14": {
+              "important": "True",
+              "isgoal": "False",
+              "minute": "6'",
+              "comment": "John Ogu (Hapoel Be'er Sheva) Goal at 6'",
+              "id": "22725404"
+            },
+            "15": {
+              "important": "False",
+              "isgoal": "False",
+              "minute": "90'",
+              "comment": "Marco Bürki (FC Thun) Substitution at 94'",
+              "id": "22725418"
+            }
+          }
+        },
+        "comm_match_player_stats": {
+          "localteam": {
+            "player": {
+              "1": {
+                "num": "5",
+                "name": "Fulvio Sulmoni",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "37153"
+              },
+              "2": {
+                "num": "7",
+                "name": "Gianluca Frontino",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "85658"
+              },
+              "3": {
+                "num": "26",
+                "name": "Thomas Reinmann",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "34854"
+              },
+              "4": {
+                "num": "31",
+                "name": "Stefan Glarner",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "20607"
+              },
+              "5": {
+                "num": "10",
+                "name": "Marcos Rojas",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "69360"
+              },
+              "6": {
+                "num": "13",
+                "name": "Simone Rapp",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "162908"
+              },
+              "7": {
+                "num": "21",
+                "name": "Nelson Ferreira",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "11472"
+              },
+              "8": {
+                "num": "28",
+                "name": "Andreas Wittwer",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "85678"
+              },
+              "9": {
+                "num": "15",
+                "name": "Lotem Zino",
+                "pos": "F",
+                "posx": "5",
+                "posy": "3",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "205174"
+              },
+              "10": {
+                "num": "17",
+                "name": "Dennis Hediger",
+                "pos": "F",
+                "posx": "5",
+                "posy": "3",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "37181"
+              },
+              "11": {
+                "num": "18",
+                "name": "Francesco Ruberto",
+                "pos": "G",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "301468"
+              },
+              "12": {
+                "num": "4",
+                "name": "Marco Bürki",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "245613"
+              },
+              "13": {
+                "num": "14",
+                "name": "Nicolas Schindelholz",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "85672"
+              },
+              "14": {
+                "num": "27",
+                "name": "Enrico Schirinzi",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "41549"
+              },
+              "15": {
+                "num": "9",
+                "name": "Jonathan Brown",
+                "pos": "F",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "16": {
+                "num": "19",
+                "name": "Gaetan Karlen",
+                "pos": "F",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "189508"
+              },
+              "17": {
+                "num": "20",
+                "name": "Ridge Munsy",
+                "pos": "F",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "177348"
+              },
+              "18": {
+                "num": "1",
+                "name": "Guillaume Faivre",
+                "pos": "G",
+                "posx": "1",
+                "posy": "3",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "11384"
+              }
+            }
+          },
+          "visitorteam": {
+            "player": {
+              "1": {
+                "num": "2",
+                "name": "Ben Bitton",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "366929"
+              },
+              "2": {
+                "num": "5",
+                "name": "Shir Tzedek",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "3": {
+                "num": "7",
+                "name": "Mahran Radi",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "4": {
+                "num": "25",
+                "name": "William Soares",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "5": {
+                "num": "10",
+                "name": "Elianiv Barda",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "13743"
+              },
+              "6": {
+                "num": "11",
+                "name": "Michael McGovern",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "7": {
+                "num": "12",
+                "name": "Ovidiu Hoban",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "8": {
+                "num": "13",
+                "name": "Ofir Davidadza",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "115179"
+              },
+              "9": {
+                "num": "24",
+                "name": "Maor Melikson",
+                "pos": "F",
+                "posx": "5",
+                "posy": "3",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "91882"
+              },
+              "10": {
+                "num": "30",
+                "name": "John Ogu",
+                "pos": "F",
+                "posx": "5",
+                "posy": "3",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": "45596"
+              },
+              "11": {
+                "num": "3",
+                "name": "Ben Turjman",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "12": {
+                "num": "17",
+                "name": "Matan Ohayon",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "13": {
+                "num": "20",
+                "name": "Loai Taha",
+                "pos": "D",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "14": {
+                "num": "15",
+                "name": "Roei Gornada",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "15": {
+                "num": "36",
+                "name": "Nofn Noln",
+                "pos": "M",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "16": {
+                "num": "9",
+                "name": "Anthony Nuatuzor Nwakaeme",
+                "pos": "F",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "17": {
+                "num": "27",
+                "name": "Ben Sahar",
+                "pos": "F",
+                "posx": "0",
+                "posy": "0",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              },
+              "18": {
+                "num": "1",
+                "name": "Dudu Goresh",
+                "pos": "G",
+                "posx": "1",
+                "posy": "3",
+                "shots_total": "",
+                "shots_on_goal": "",
+                "goals": "",
+                "assists": "",
+                "offsides": "",
+                "fouls_drawn": "",
+                "fouls_commited": "",
+                "saves": "",
+                "yellowcards": "",
+                "redcards": "",
+                "pen_score": "",
+                "pen_miss": "",
+                "id": ""
+              }
+            }
+          }
+        }
+      }
+    ],
+    "Action": "commentaries",
+    "Params": {
+      "Action": "commentaries",
+      "APIKey": "69216017-4bb7-96db-0deeadb1b645",
+      "match_id": "2011763",
+      "comm_static_id": "1926053"
+    },
+    "ComputationTime": 0.0091891288757324,
+    "IP": "81.193.138.143",
+    "ERROR": "OK",
+    "ServerName": "Football-API",
+    "ServerAddress": "http://football-api.com/api"
   }
 }

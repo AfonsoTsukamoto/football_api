@@ -6,8 +6,13 @@ module FootballApi
       @id        = hash[:id]
       @important = hash[:important]
       @is_goal   = hash[:isgoal]
-      @minute    = hash[:minute]
+      @minute    = parse_minute(hash)
       @comment   = hash[:comment]
+    end
+
+    private
+    def parse_minute(hash)
+      hash[:minute].to_i
     end
   end
 end
