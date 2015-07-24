@@ -35,7 +35,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     @base_url = "football-api.com"
-    @api_key = ENV['API_KEY']
+    @api_key = ENV['FOOTBALL_API_KEY']
     @headers = {
       'Accept'=>'*/*',
       'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
