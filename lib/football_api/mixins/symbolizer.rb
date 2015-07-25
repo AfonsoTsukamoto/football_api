@@ -10,8 +10,10 @@ module FootballApi
       # Custom deep symbolize of an hash
       # So we can override the mess of some footbal-api arrays
       def custom_deep_symbolic_hash(hash)
+        return {} unless hash
+
         {}.tap do |h|
-          Hash.new(hash).each do |key, value|
+          hash.map do |key, value|
             key = symbolyze_key(key)
             h[key] = map_value(key, value)
           end

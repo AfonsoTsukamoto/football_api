@@ -55,7 +55,6 @@ module FootballApi
       # It also deep symbolizes the response keys
       def response(options = {})
         data = get!(options) || Hash.new
-
         data = custom_deep_symbolic_hash(data)
         data.present? ? data[json_id] : data
       end
