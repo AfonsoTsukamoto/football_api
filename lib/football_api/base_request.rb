@@ -27,7 +27,7 @@ module FootballApi
     default_params 'APIKey' => ENV.fetch('FOOTBALL_API_KEY', '')
 
     # Default request timeout in seconds. This can be overriden by module configuration.
-    default_timeout 15
+    default_timeout 120
 
     class << self
 

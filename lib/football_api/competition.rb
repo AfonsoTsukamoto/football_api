@@ -15,7 +15,10 @@ module FootballApi
     attr_accessor :id, :name, :region
 
     def self.all
-      response && response.map do |comp|
+      request_response = response
+      return [] unless request_response
+
+      request_response.map do |comp|
         new(comp)
       end
     end
