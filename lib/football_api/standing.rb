@@ -18,7 +18,7 @@ module FootballApi
       end
 
       def collection(json)
-        json = json[:teams] || json
+        json = json[:teams] || json if json.is_a? Hash
         Array(json).map{ |el|
           new(el)
         }

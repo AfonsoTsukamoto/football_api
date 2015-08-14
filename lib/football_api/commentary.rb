@@ -19,7 +19,7 @@ module FootballApi
       end
 
       def collection(json)
-        json = json[:commentaries] || json
+        json = json[:commentaries] || json if json.is_a? Hash
 
         Array(json).map{ |el|
           new(el)
