@@ -9,7 +9,7 @@ module JSONHelper
     def cache_or_load(path)
       cache[path] ||= begin
         file = File.read(path)
-        JSON.parse(file).symbolize_keys
+        JSON.parse(file)
       end
     end
 
@@ -23,6 +23,8 @@ module JSONHelper
   # Declaring a class for each one was too much.
   # With this, it works, but is too meta, I think.
   class Generic
+    include FootballApi::Symbolizer
+
     def self.get(name)
       new.get(name)
     end
@@ -30,7 +32,8 @@ module JSONHelper
     def get(name)
       file_name = "#{File.basename(self.class.name.underscore)}.json"
       fixtures = ::JSONHelper.load_file(file_name)
-      fixtures[name.to_sym].clone
+      fixtures = self.class.custom_deep_symbolic_hash(fixtures)
+      fixtures[name.to_sym] && fixtures[name.to_sym].clone
     end
   end
 

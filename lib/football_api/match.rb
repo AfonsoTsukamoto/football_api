@@ -20,7 +20,8 @@ module FootballApi
       end
 
       def collection(json)
-        Array(json).map { |match| new(match) }
+        json = json[:matches] || json
+        Array(json).map{ |el| new(el) }
       end
 
       def match_params

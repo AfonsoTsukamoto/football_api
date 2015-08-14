@@ -20,7 +20,10 @@ module FootballApi
       end
 
       def collection(json)
-        Array(json).map{ |el| new(el) }
+        json = json[:Competition] || json
+        Array(json).map{ |el|
+          new(el)
+        }
       end
 
       def where(options = {})

@@ -19,7 +19,11 @@ module FootballApi
       end
 
       def collection(json)
-        json.map{ |el| new(el) }
+        json = json[:commentaries] || json
+
+        Array(json).map{ |el|
+          new(el)
+        }
       end
     end
 

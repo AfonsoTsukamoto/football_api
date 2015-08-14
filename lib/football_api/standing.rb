@@ -18,7 +18,10 @@ module FootballApi
       end
 
       def collection(json)
-        Array(json).map{ |standing| new(standing) }
+        json = json[:teams] || json
+        Array(json).map{ |el|
+          new(el)
+        }
       end
     end
 

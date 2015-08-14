@@ -9,7 +9,7 @@ module FootballApi
         puts 'Returns mock class instance for tests.'
         puts 'Available methods:'
         meths.each do |m|
-          puts "\t - Infostrada::Mock.#{m}"
+          puts "\t - FootballApi::Mock.#{m}"
         end
         puts 'Params'
         puts '*type*, which allows the selection of the mock json.'
@@ -23,7 +23,7 @@ module FootballApi
 
       def competitions(type = :all)
         json = JSONHelper::Competitions.get(type)
-        FootballApi::Competitions.collection(json)
+        FootballApi::Competition.collection(json)
       end
 
       def fixtures(type = :from_to_date)
@@ -31,13 +31,13 @@ module FootballApi
         FootballApi::Fixture.collection(json)
       end
 
-      def matches(type = :no_matches_today)
-        json = JSONHelper::Fixtures.get(type)
+      def matches(type = :today_default)
+        json = JSONHelper::Matches.get(type)
         FootballApi::Match.collection(json)
       end
 
       def standings(type = :default)
-        json = JSONHelper::Fixture.get(type)
+        json = JSONHelper::Standings.get(type)
         FootballApi::Standing.collection(json)
       end
     end

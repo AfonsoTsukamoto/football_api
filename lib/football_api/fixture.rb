@@ -17,7 +17,10 @@ module FootballApi
       end
 
       def collection(json)
-        Array(json).map{ |el| new(el) }
+        json = json[:matches] || json
+        Array(json).map{ |el|
+          new(el)
+        }
       end
 
       def fixture_params
