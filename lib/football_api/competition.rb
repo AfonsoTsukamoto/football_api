@@ -14,17 +14,21 @@ module FootballApi
     # ]
     attr_accessor :id, :name, :region
 
-    def self.all
-      request_response = response
-      return [] unless request_response
-
-      request_response.map do |comp|
-        new(comp)
+    class << self
+      def all
+        response && collection(response)
       end
-    end
 
-    def self.where(options = {})
-      response.select{ |c| matches_options(c, options) }.map{ |hsh| new(hsh) }
+      def collection(json)
+        json = json[:Competition] || json if json.is_a? Hash
+        Array(json).map{ |el|
+          new(el)
+        }
+      end
+
+      def where(options = {})
+        response.select{ |c| matches_options(c, options) }.map{ |hsh| new(hsh) }
+      end
     end
 
     def initialize(hash = {})

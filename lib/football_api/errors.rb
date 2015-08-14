@@ -8,6 +8,6 @@ module FootballApi
   class RequestError < BaseError
   end
 
-  class InfostradaError < BaseError
+  class FootballApiError < BaseError
   end
 end
