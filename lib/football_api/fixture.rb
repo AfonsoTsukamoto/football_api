@@ -12,7 +12,6 @@ module FootballApi
         @match_date = options.delete(:match_date)
         @from_date = options.delete(:from_date)
         @to_date = options.delete(:to_date)
-
         collection(response)
       end
 

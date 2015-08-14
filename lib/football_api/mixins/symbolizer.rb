@@ -4,16 +4,15 @@ module FootballApi
       base.extend(ClassMethods)
     end
 
-    HASH_OR_ARRAY_KEYS = %i(player substitution comment match_events)
+    HASH_OR_ARRAY_KEYS = [:player, :substitution, :comment, :match_events].freeze
 
     module ClassMethods
       # Custom deep symbolize of an hash
       # So we can override the mess of some footbal-api arrays
       def custom_deep_symbolic_hash(hash)
-        return unless hash.is_a? Hash
-
+        return {} unless hash && hash.is_a?(Hash)
         {}.tap do |h|
-          Hash(hash).each do |key, value|
+          hash.map do |key, value|
             key = symbolyze_key(key)
             h[key] = map_value(key, value)
           end
