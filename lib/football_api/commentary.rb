@@ -11,11 +11,15 @@ module FootballApi
         @match_id = match.is_a?(Match) ? match.id : match
 
         res = response
-        res.map { |commentary| new(commentary) }.first
+        collection(res).first
       end
 
       def commentary_params
         { match_id: self.match_id }
+      end
+
+      def collection(json)
+        json.map{ |el| new(el) }
       end
     end
 

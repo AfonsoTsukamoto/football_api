@@ -11,13 +11,16 @@ module FootballApi
 
       def today
         @competition_id = nil
-        Array(response).map { |match| new(match) }
+        collection(response)
       end
 
       def all_from_competition(competition)
         @competition_id = competition.is_a?(Competition) ? competition.id : competition
+        collection(response)
+      end
 
-        Array(response).map { |match| new(match) }
+      def collection(json)
+        Array(json).map { |match| new(match) }
       end
 
       def match_params

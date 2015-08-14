@@ -10,11 +10,15 @@ module FootballApi
       def all_from_competition(competition)
         self.competition_id = competition.is_a?(Competition) ? competition.id : competition
 
-        Array(response).map{ |standing| new(standing) }
+        collection(response)
       end
 
       def standing_params
         { comp_id: self.competition_id }
+      end
+
+      def collection(json)
+        Array(json).map{ |standing| new(standing) }
       end
     end
 

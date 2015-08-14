@@ -13,9 +13,11 @@ module FootballApi
         @from_date = options.delete(:from_date)
         @to_date = options.delete(:to_date)
 
-        response.map{ |fixture|
-          new (fixture)
-        }
+        collection(response)
+      end
+
+      def collection(json)
+        Array(json).map{ |el| new(el) }
       end
 
       def fixture_params
